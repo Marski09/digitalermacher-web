@@ -2,10 +2,13 @@
 
 import { useState, type FormEvent } from "react";
 
-const FORM_ENDPOINT =
-  typeof window !== "undefined" && window.location.origin.includes("localhost")
-    ? "/api/contact"
-    : "https://form.taxi/s/jbw9im8g";
+function getFormEndpoint() {
+  if (typeof window === "undefined") return "https://form.taxi/s/jbw9im8g";
+  const { hostname } = window.location;
+  if (hostname === "localhost") return "/api/contact";
+  if (hostname.includes("netlify.app")) return "/.netlify/functions/submit-form";
+  return "https://form.taxi/s/jbw9im8g";
+}
 
 const MITARBEITER_OPTIONEN = ["1–20", "21–50", "51–100", "Mehr als 100"];
 
@@ -23,7 +26,7 @@ export default function KontaktFormular({ buttonText = "Jetzt Potenzial-Check an
     const data = new FormData(form);
 
     try {
-      const res = await fetch(FORM_ENDPOINT, {
+      const res = await fetch(getFormEndpoint(), {
         method: "POST",
         body: data,
         headers: {
