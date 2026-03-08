@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Siegel from "./Siegel";
 
 const NAV_ITEMS = [
@@ -10,18 +10,53 @@ const NAV_ITEMS = [
   { label: "FAQs", href: "/faqs" },
 ];
 
+const SCROLL_THRESHOLD = 30;
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    const handleResize = () => setIsMobile(mq.matches);
+    handleResize();
+    mq.addEventListener("change", handleResize);
+    return () => mq.removeEventListener("change", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > SCROLL_THRESHOLD);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const showCompactHeader = isScrolled && isMobile;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b-2 border-accent/60">
-      <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6" aria-label="Hauptnavigation">
-        {/* Logo + Siegel – Platz für Hamburger auf Mobile */}
-        <a href="/" className="flex min-w-0 shrink items-center gap-0.5 pr-12 md:pr-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:rounded" aria-label="Digitalermacher – Startseite">
-          <span className="font-kalam-bold text-[2.2rem] tracking-tight text-black sm:text-[2.5rem]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b-2 border-accent/60 transition-shadow duration-300">
+      <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 transition-all duration-300 sm:px-6 md:py-4" aria-label="Hauptnavigation">
+        {/* Logo + Siegel – Mobile: klein + Platz für Hamburger wenn gescrollt */}
+        <a
+          href="/"
+          className={`flex min-w-0 shrink items-center gap-0.5 transition-all duration-300 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:rounded md:pr-0 ${
+            showCompactHeader ? "pr-12" : "pr-0"
+          }`}
+          aria-label="Digitalermacher – Startseite"
+        >
+          <span
+            className={`font-kalam-bold tracking-tight text-black transition-all duration-300 ${
+              showCompactHeader
+                ? "text-xl md:text-[2.2rem] lg:text-[2.5rem]"
+                : "text-[2.2rem] sm:text-[2.5rem]"
+            }`}
+          >
             Digitalermacher
           </span>
-          <Siegel />
+          <Siegel compact={showCompactHeader} />
         </a>
 
         {/* Desktop-Navigation */}
@@ -46,8 +81,12 @@ export default function Header() {
           </li>
         </ul>
 
-        {/* Mobile Hamburger – absolut positioniert, immer oben rechts sichtbar */}
-        <div className="absolute right-4 top-1/2 z-10 -translate-y-1/2 md:hidden">
+        {/* Mobile Hamburger – nur sichtbar wenn gescrollt */}
+        <div
+          className={`absolute right-4 top-1/2 z-10 -translate-y-1/2 transition-opacity duration-300 md:hidden ${
+            showCompactHeader ? "opacity-100" : "pointer-events-none opacity-0"
+          }`}
+        >
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}

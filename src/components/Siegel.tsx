@@ -1,8 +1,10 @@
-export default function Siegel() {
+export default function Siegel({ compact = false }: { compact?: boolean }) {
   return (
     <svg
       viewBox="0 0 200 100"
-      className="h-12 w-auto -rotate-[25deg] shrink-0 sm:h-14"
+      className={`w-auto -rotate-[25deg] shrink-0 transition-all duration-300 ${
+        compact ? "h-8 md:h-12" : "h-12 sm:h-14"
+      }`}
       role="img"
       aria-label="Siegel: Das Original"
     >
