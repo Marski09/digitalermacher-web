@@ -39,7 +39,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b-2 border-accent/60 transition-shadow duration-300">
       <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 transition-all duration-300 sm:px-6 md:py-4" aria-label="Hauptnavigation">
-        {/* Logo + Siegel – Mobile: klein + Platz für Hamburger wenn gescrollt */}
+        {/* Logo + Siegel – Mobile gescrollt: nur Logo, Siegel ausgeblendet */}
         <a
           href="/"
           className={`flex min-w-0 shrink items-center gap-0.5 transition-all duration-300 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:rounded md:pr-0 ${
@@ -50,13 +50,13 @@ export default function Header() {
           <span
             className={`font-kalam-bold tracking-tight text-black transition-all duration-300 ${
               showCompactHeader
-                ? "text-xl md:text-[2.2rem] lg:text-[2.5rem]"
+                ? "text-2xl md:text-[2.2rem] lg:text-[2.5rem]"
                 : "text-[2.2rem] sm:text-[2.5rem]"
             }`}
           >
             Digitalermacher
           </span>
-          <Siegel compact={showCompactHeader} />
+          {!showCompactHeader && <Siegel />}
         </a>
 
         {/* Desktop-Navigation */}
