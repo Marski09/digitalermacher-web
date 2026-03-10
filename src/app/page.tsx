@@ -74,7 +74,7 @@ export default function Home() {
           sizes="100vw"
         />
 
-        <div className="absolute inset-0 bg-black/90" aria-hidden="true" />
+        <div className="absolute inset-0 bg-black/75" aria-hidden="true" />
 
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center text-white sm:px-6">
           <h1 className="font-kalam-bold text-4xl leading-tight sm:text-5xl md:text-7xl lg:text-8xl">
