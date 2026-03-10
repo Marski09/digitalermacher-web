@@ -27,7 +27,7 @@ const kalamBold = localFont({
 export const metadata: Metadata = {
   title: "Digitalermacher – Weniger Change. Mehr Upgrade!",
   description:
-    "Optimierung statt Abriss. Bestehende Kern-Systeme bleiben erhalten und werden durch intelligente digitale Brücken zu Hochleistungswerkzeugen erweitert.",
+    "Optimierung statt kompletter Systemwechsel. Bestehende Kern-Systeme bleiben erhalten und werden durch intelligente digitale Brücken zu Hochleistungswerkzeugen erweitert.",
 };
 
 export default function RootLayout({

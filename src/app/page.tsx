@@ -12,7 +12,7 @@ const BENEFITS = [
   },
   {
     title: "Investitionen schützen",
-    text: "Kein Abriss, sondern Upgrade. Ihre etablierten Kernprozesse bleiben erhalten und werden durch intelligente Brücken zum Hochleistungswerkzeug erweitert.",
+    text: "Voller Werterhalt durch Upgrade. Ihre etablierten Kernprozesse bleiben erhalten und werden durch intelligente Brücken zum Hochleistungswerkzeug erweitert.",
   },
   {
     title: "200% ROI innerhalb 6 Monaten",
@@ -105,7 +105,7 @@ export default function Home() {
             Die konkrete Perspektive für Sie
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-neutral-600">
-            Optimierung statt Abriss. Vier Versprechen, die wir mit jedem
+            Optimierung statt Neuanfang. Vier Versprechen, die wir mit jedem
             Projekt einlösen.
           </p>
 
@@ -130,7 +130,7 @@ export default function Home() {
             Unser Vorgehen: Der Anbau-Ansatz
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-neutral-400">
-            Kein Abriss Ihrer bestehenden Infrastruktur.
+            Kein Abriss Ihrer bestehenden Infrastruktur!
             <br />
             Wir bauen an, was fehlt – Schritt für Schritt, transparent und messbar.
           </p>

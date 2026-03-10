@@ -12,7 +12,7 @@ const FAQS = [
   {
     frage: "Muss die gewohnte Software für die Optimierung aufgegeben werden?",
     antwort:
-      `Nein. Bestehende Kern-Systeme enthalten wertvolles Prozesswissen. Die Strategie lautet „Optimierung statt Abriss" – die vorhandene Software bleibt das Fundament und wird punktgenau durch digitale Brücken erweitert.`,
+      `Nein. Bestehende Kern-Systeme enthalten wertvolles Prozesswissen. Die Strategie lautet „Optimierung statt Systemwechsel-Chaos" – die vorhandene Software bleibt das Fundament und wird punktgenau durch digitale Brücken erweitert.`,
   },
   {
     frage: "Wie sicher ist der garantierte ROI von mindestens 200%?",
