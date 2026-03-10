@@ -25,7 +25,7 @@ const kalamBold = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Digitalermacher – Weniger Change. Mehr Upgrade!",
+  title: "Digitalermacher – Upgrades für Ihre digitalen Prozesse",
   description:
     "Optimierung statt kompletter Systemwechsel. Bestehende Kern-Systeme bleiben erhalten und werden durch intelligente digitale Brücken zu Hochleistungswerkzeugen erweitert.",
 };
