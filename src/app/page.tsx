@@ -66,27 +66,29 @@ export default function Home() {
         className="relative flex min-h-screen items-center justify-center overflow-hidden"
       >
         <Image
-          src="/images/hero-gears.webp"
+          src="/images/digi-tech.webp"
           alt="Ineinandergreifende Zahnräder – symbolisiert die reibungslose Optimierung bestehender Systeme"
           fill
-          className="object-cover grayscale blur-[1.5px]"
+          className="object-cover"
           priority
           sizes="100vw"
         />
 
-        <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
+        <div className="absolute inset-0 bg-black/90" aria-hidden="true" />
 
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center text-white sm:px-6">
           <h1 className="font-kalam-bold text-4xl leading-tight sm:text-5xl md:text-7xl lg:text-8xl">
-            Weniger Change.
+            Upgrades für Ihre
             <br />
-            Mehr Upgrade!
+            digitalen Prozesse!
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg font-medium leading-relaxed text-white/85 md:text-xl">
-            Sie bekommen von uns nicht, was wir für richtig halten, sondern genau die
-            Tools, die Sie brauchen. Bestehende Systeme bleiben erhalten –
-            und werden zu Hochleistungswerkzeugen erweitert.
+            Wir machen Ihre bestehende Software zum Hochleistungswerkzeug.
+            <br />
+            Statt kostspieliger Systemwechsel liefern wir punktgenau die digitalen
+            Erweiterungen, die Ihr Team heute braucht – nahtlos integriert und
+            sofort einsatzbereit.
           </p>
 
           <a
