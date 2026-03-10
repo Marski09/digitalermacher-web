@@ -67,7 +67,7 @@ export default function Home() {
       >
         <Image
           src="/images/digi-tech.webp"
-          alt="Ineinandergreifende Zahnräder – symbolisiert die reibungslose Optimierung bestehender Systeme"
+          alt="Digitale Struktur, Netzwerk, abstrakt – symbolisiert digitale Systeme."
           fill
           className="object-cover"
           priority

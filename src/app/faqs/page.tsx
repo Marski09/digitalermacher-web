@@ -92,9 +92,7 @@ export default function FaqsPage() {
             Häufig gestellte Fragen
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-400">
-            Klare Antworten auf die wichtigsten Fragen rund um unseren
-            Anbau-Ansatz,
-            <br />
+            Klare Antworten auf die wichtigsten Fragen rund um unseren Anbau-Ansatz,
             den Potenzial-Check und die Zusammenarbeit.
           </p>
         </div>

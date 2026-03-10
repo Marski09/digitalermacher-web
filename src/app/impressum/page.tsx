@@ -8,16 +8,16 @@ export default function ImpressumPage() {
   return (
     <section className="pt-32 pb-24 md:pb-32 md:pt-40">
       <div className="prose prose-neutral mx-auto max-w-3xl px-4 sm:px-6">
-        <h1>Impressum</h1>
+        <h1 className="!text-[1.91rem]">Impressum</h1>
 
         <p>
           Markus Schilaski
           <br />
           Digitalermacher
           <br />
-          Josef-Ponten-Stra&szlig;e 21
+          Josef-Ponten-Straße 21
           <br />
-          40595 D&uuml;sseldorf
+          40595 Düsseldorf
         </p>
 
         <h2>Kontakt</h2>
@@ -29,7 +29,7 @@ export default function ImpressumPage() {
 
         <h2>Umsatzsteuer-ID</h2>
         <p>
-          Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect;&nbsp;27&nbsp;a
+          Umsatzsteuer-Identifikationsnummer gemäß § 27 a
           Umsatzsteuergesetz:
           <br />
           DE 210778700

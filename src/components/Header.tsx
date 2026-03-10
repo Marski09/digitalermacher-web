@@ -10,7 +10,7 @@ const NAV_ITEMS = [
   { label: "FAQs", href: "/faqs" },
 ];
 
-const SCROLL_THRESHOLD = 30;
+const SCROLL_THRESHOLD = 15;
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

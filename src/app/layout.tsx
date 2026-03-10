@@ -54,7 +54,7 @@ export default function RootLayout({
           <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-12 sm:px-6 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="font-kalam-bold text-lg text-white">Digitalermacher</p>
-              <p className="text-sm text-neutral-500">&copy; 2026</p>
+              <p className="text-sm text-neutral-500">© 2026</p>
             </div>
             <div className="flex gap-6 text-sm">
               <a href="/impressum" className="transition-colors hover:text-accent-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:rounded">
